@@ -3,10 +3,14 @@
     "version": "0.0.1",
     "description": "",
     "private": true,
+    "dependencies": {
+        "@sap/approuter": "^9.1.0"
+    },
     "devDependencies": {
         "ui5-middleware-cfdestination": "0.7.0"
     },
     "scripts": {
+        "start": "node node_modules/@sap/approuter/approuter.js",
         "build": "ui5 build --include-task=generateManifestBundle generateCachebusterInfo"
     },
     "ui5": {

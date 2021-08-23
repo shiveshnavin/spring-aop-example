@@ -2,8 +2,8 @@ applications:
   - name: cf-training-i516430
     path: target/sample-0.0.1-SNAPSHOT.jar
     buildpack: sap_java_buildpack
-    memory: 4096M
-    disk-quota: 2048M
+    memory: 2048M
+    disk-quota: 1024M
     env:
       TARGET_RUNTIME: TOMCAT
       SPRING_PROFILES_ACTIVE: cloud

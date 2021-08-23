@@ -1,0 +1,48 @@
+_schema-version: "2.0.0"
+ID: cf-training
+version: 2.0.0
+
+modules:
+    - name: cf-training-ui
+      type: nodejs
+      path: ui
+      parameters:
+          disk-quota: 1024M
+          memory: 256M
+      build-parameters:
+          builder: custom
+          commands:
+            - npm install
+            - npm run build
+      requires:
+          - name: server_api
+            group: destinations
+            properties:
+                name: cftrainingapi
+                url: ~{url}
+                forwardAuthToken: true
+    - name: cf-training-srv
+      type: custom
+      path: srv
+      parameters:
+          memory: 1536M
+          buildpack: java_buildpack
+          disk-quota: 1536M
+      provides:
+          - name: server_api
+            properties:
+                url: "${default-url}"
+      build-parameters:
+          builder: custom
+          commands:
+              - mvn clean package -Dmaven.test.skip=true
+          build-result: "target/*.jar"
+      requires:
+          - name: cftraininghana
+resources:
+    - name: cftraininghana  
+      type:  com.sap.xs.hdi-container
+      parameters:
+          service-plan: securestore
+          service: hanatrial
+          

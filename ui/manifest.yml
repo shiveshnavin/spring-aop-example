@@ -2,7 +2,7 @@
 applications:
     - name: cf-training-i516430-ui
       path: /
-      memory: 1G
+      memory: 512M
       buildpacks:
           - nodejs_buildpack
       env:
