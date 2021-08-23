@@ -13,7 +13,7 @@ public class FlowLoggerAspect {
 
     @Before("@annotation(com.sap.cf.sample.annotations.FlowLogger)")
     public void logMethodExecution(JoinPoint joinPoint) {
-        log.info("Executing method {} ", joinPoint.getSignature().getName());
+        log.info("Executing method {} ", joinPoint.getSignature());
     }
 
 }
