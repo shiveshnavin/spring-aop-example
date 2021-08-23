@@ -11,11 +11,6 @@
       "source": "/",
       "target": "/",
       "localDir": "dist"
-    },
-    {
-      "source": "/resources",
-      "target": "/resources",
-      "service": "https://openui5.hana.ondemand.com/resources/"
     }
   ]
 }
