@@ -19,4 +19,9 @@ public class ScholarService {
        return repo.findAll();
     }
 
+    @FlowLogger
+    public Scholar create(String name, String batch) {
+        Scholar newScholar = new Scholar(name,batch);
+        return repo.save(newScholar);
+    }
 }

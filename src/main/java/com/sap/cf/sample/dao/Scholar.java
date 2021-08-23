@@ -1,6 +1,5 @@
 package com.sap.cf.sample.dao;
 
-import ch.qos.logback.core.db.dialect.SQLiteDialect;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -23,4 +22,9 @@ public class Scholar {
     Long id;
     String name;
     String batch;
+
+    public Scholar(String name, String batch) {
+        this.name = name;
+        this.batch = batch;
+    }
 }
