@@ -1,4 +1,4 @@
-package com.sap.cf.sample.annotations;
+package com.sap.cf.sample.support.annotations;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
