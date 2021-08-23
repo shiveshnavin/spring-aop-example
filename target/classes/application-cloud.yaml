@@ -1,11 +1,8 @@
 spring:
-  h2:
-    console:
-      enabled: true
-      path: /h2
   datasource:
-    url: jdbc:h2:mem:test;DB_CLOSE_DELAY=-1
-    username: sa
-    password:
-    driverClassName: org.h2.Driver
-    initialization-mode: always
+    username: ${vcap.services.cftraininghana.credentials.user}
+    password: ${vcap.services.cftraininghana.credentials.password}
+    url: ${vcap.services.cftraininghana.credentials.url}
+    driver-class-name: ${vcap.services.cftraininghana.credentials.driver}
+    hikari:
+      schema: ${vcap.services.cftraininghana.credentials.schema}

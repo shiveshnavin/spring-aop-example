@@ -1,4 +1,4 @@
-package com.sap.cf.sample;
+package com.scholars.cf.sample;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

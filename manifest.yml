@@ -1,0 +1,19 @@
+applications:
+  - name: cf-training-i516430
+    path: target/sample-0.0.1-SNAPSHOT.jar
+    buildpack: sap_java_buildpack
+    memory: 4096M
+    disk-quota: 2048M
+    env:
+      TARGET_RUNTIME: TOMCAT
+      SPRING_PROFILES_ACTIVE: cloud
+      JBP_CONFIG_JAVA_OPTS: "[java_opts: '-Xshare:off -Xmx2250m -Xss2m -XX:MaxMetaspaceSize=200m -XX:MaxDirectMemorySize=512m -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:8000']"
+      JBP_CONFIG_SAPJVM_MEMORY_SIZES: "metaspace:128m.."
+      JBP_CONFIG_COMPONENTS: "jres: ['com.sap.xs.java.buildpack.jdk.SAPMachineJDK']"
+      JBP_CONFIG_SAP_MACHINE_JRE: "{ jre: { version: 11.+ } }"
+      JBP_CONFIG_DEBUG: "{enabled: true}"
+    services:
+      - cftraininghana
+
+
+

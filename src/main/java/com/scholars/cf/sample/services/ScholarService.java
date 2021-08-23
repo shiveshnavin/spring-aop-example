@@ -1,8 +1,8 @@
-package com.sap.cf.sample.services;
+package com.scholars.cf.sample.services;
 
-import com.sap.cf.sample.support.annotations.FlowLogger;
-import com.sap.cf.sample.dao.Scholar;
-import com.sap.cf.sample.repository.ScholarRepo;
+import com.scholars.cf.sample.support.annotations.FlowLogger;
+import com.scholars.cf.sample.dao.Scholar;
+import com.scholars.cf.sample.repository.ScholarRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

@@ -1,9 +1,9 @@
-package com.sap.cf.sample.controllers;
+package com.scholars.cf.sample.controllers;
 
-import com.sap.cf.sample.support.annotations.Cached;
-import com.sap.cf.sample.support.annotations.FlowLogger;
-import com.sap.cf.sample.dao.Scholar;
-import com.sap.cf.sample.services.ScholarService;
+import com.scholars.cf.sample.support.annotations.Cached;
+import com.scholars.cf.sample.support.annotations.FlowLogger;
+import com.scholars.cf.sample.dao.Scholar;
+import com.scholars.cf.sample.services.ScholarService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

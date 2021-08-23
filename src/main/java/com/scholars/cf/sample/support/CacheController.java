@@ -1,6 +1,6 @@
-package com.sap.cf.sample.support;
+package com.scholars.cf.sample.support;
 
-import com.sap.cf.sample.support.aspects.FlowLoggerAspect;
+import com.scholars.cf.sample.support.aspects.FlowLoggerAspect;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.RestController;
 

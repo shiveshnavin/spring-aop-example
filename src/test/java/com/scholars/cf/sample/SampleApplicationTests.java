@@ -1,4 +1,4 @@
-package com.sap.cf.sample;
+package com.scholars.cf.sample;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

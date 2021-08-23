@@ -1,4 +1,4 @@
-package com.sap.cf.sample.dao;
+package com.scholars.cf.sample.dao;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

@@ -1,4 +1,4 @@
-package com.sap.cf.sample.support.aspects;
+package com.scholars.cf.sample.support.aspects;
 
 import lombok.extern.slf4j.Slf4j;
 import org.aspectj.lang.JoinPoint;
@@ -19,12 +19,12 @@ public class FlowLoggerAspect {
 
     public static Map<String, Object> cache = new HashMap<>();
 
-    @Before("@annotation(com.sap.cf.sample.support.annotations.FlowLogger)")
+    @Before("@annotation(com.scholars.cf.sample.support.annotations.FlowLogger)")
     public void logMethodExecution(JoinPoint joinPoint) {
         log.info("Executing method {} ", joinPoint.getSignature());
     }
 
-    @Around("@annotation(com.sap.cf.sample.support.annotations.Cached)")
+    @Around("@annotation(com.scholars.cf.sample.support.annotations.Cached)")
     public Object cachedMethodCall(ProceedingJoinPoint joinPoint) throws Throwable {
         String cacheKey = joinPoint.toShortString().replace("..", Arrays.toString(joinPoint.getArgs()));
         log.info("Checking in cache {}", cacheKey);
