@@ -6,26 +6,17 @@
 			</headerContent>
 
 
-			<content>
-				
+			<content> 
+
 				<IconTabBar expanded="{device>/isNoPhone}" class="sapUiSmallMarginBottom sapUiResponsiveContentPadding">
 					<items>
 						<IconTabFilter text="Scholars">
-							<List
-							showSeparators="Inner"
-							items="{/scholars}"
-							growing="true"
-							growingThreshold="4"
-							growingScrollToLoad="false">
-							<StandardListItem
-								title="{name}"
-								description="{batch}"
-								iconDensityAware="false"
-								iconInset="false" />
-						</List>
+							<List showSeparators="Inner" items="{scholars>/}" growing="true" growingThreshold="4" growingScrollToLoad="false">
+								<StandardListItem title="{scholars>name}" description="{scholars>batch}" iconDensityAware="false" iconInset="false" info="{scholars>id}" />
+							</List>
 
 						</IconTabFilter>
-				
+
 
 					</items>
 				</IconTabBar>

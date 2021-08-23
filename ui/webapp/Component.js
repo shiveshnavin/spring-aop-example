@@ -2,9 +2,9 @@ sap.ui.define([
 	"sap/ui/core/UIComponent",
 	"sap/ui/Device",
 	"sn/covid19fnt/model/models",
-		"sap/ui/model/json/JSONModel"
+	"sap/ui/model/json/JSONModel"
 
-], function (UIComponent, Device, models,JSONModel) {
+], function (UIComponent, Device, models, JSONModel) {
 	"use strict";
 
 	return UIComponent.extend("sn.covid19fnt.Component", {
@@ -27,7 +27,7 @@ sap.ui.define([
 
 			// set the device model
 			this.setModel(models.createDeviceModel(), "device");
-			this.setModel(new JSONModel([{id:1,name:"shivesh",batch:"yoyo"}]),"scholars");
+			this.setModel(new JSONModel([]), "scholars");
 		}
 	});
 });

@@ -1,0 +1,10 @@
+---
+applications:
+    - name: cf-training-i516430-ui
+      path: /
+      memory: 1G
+      buildpacks:
+          - nodejs_buildpack
+      env:
+        TENANT_HOST_PATTERN: '^(.*)-*.*'
+        destinations: '[{"name":"cftrainingapi", "url":"https://cf-training-i516430.cfapps.us10.hana.ondemand.com", "forwardAuthToken": true}]'
