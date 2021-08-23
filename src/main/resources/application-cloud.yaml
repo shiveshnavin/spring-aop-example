@@ -1,8 +1,0 @@
-spring:
-  datasource:
-    username: ${vcap.services.cftraininghana.credentials.user}
-    password: ${vcap.services.cftraininghana.credentials.password}
-    url: ${vcap.services.cftraininghana.credentials.url}
-    driver-class-name: ${vcap.services.cftraininghana.credentials.driver}
-    hikari:
-      schema: ${vcap.services.cftraininghana.credentials.schema}
