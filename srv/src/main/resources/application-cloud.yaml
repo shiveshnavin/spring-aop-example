@@ -6,3 +6,6 @@ spring:
     driver-class-name: ${vcap.services.cftraininghana.credentials.driver}
     hikari:
       schema: ${vcap.services.cftraininghana.credentials.schema}
+  jpa:
+    hibernate:
+      ddl-auto: update

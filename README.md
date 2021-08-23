@@ -11,5 +11,6 @@ Sample CF app
 
 ## Compile
 
+    $ cd srv
     $ mvn clean package 
  
