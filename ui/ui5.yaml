@@ -15,6 +15,5 @@ server:
          port: 9087
          xsappJson: "xs-app.json"
          destinations:
-            # check that the destination name (here: "api") matches your router in xssppJson 
-            - name: "api"
-              url: "http://services.odata.org"
+            - name: "cftrainingapi"
+              url: "https://cf-training-i516430.cfapps.us10.hana.ondemand.com"

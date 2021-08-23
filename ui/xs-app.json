@@ -1,16 +1,21 @@
 {
-            "welcomeFile": "index.html",
-            "authenticationMethod": "none",
-            "routes": [{
-                  "source": "/api/(.*)",
-                  "target": "$1",
-                  "destination": "api"
-              },
-              {
-                "source": "/",
-                "target": "/",
-                "localDir": "dist"
-              }
-            ]
-          }
-          
+  "welcomeFile": "index.html",
+  "authenticationMethod": "none",
+  "routes": [
+    {
+      "source": "/api/(.*)",
+      "target": "$1",
+      "destination": "cftrainingapi"
+    },
+    {
+      "source": "/",
+      "target": "/",
+      "localDir": "dist"
+    },
+    {
+      "source": "/resources",
+      "target": "/resources",
+      "service": "https://openui5.hana.ondemand.com/resources/"
+    }
+  ]
+}
