@@ -2,7 +2,7 @@
 *.class
 .idea/
 .mvn/
-../sample.iml
+sample.iml
 # Log file
 *.log
 target/
